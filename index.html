@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="yandex-verification" content="c47f2d92ec02484c" />
+  <style>
+    .cv {
+      color: rgb(20, 170, 108) !important;
+    }
+  </style>
+  <link rel="stylesheet" href="main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="js.js">
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/97458522" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <link rel="stylesheet" href="bs.css">
+  <link rel="stylesheet" href="faq.css">
+  <title>#АвеХаб - портал твоей студенческой жизни</title>
+</head>
+
+<body class="aa">
+  <div class="navb" id="navb">
+    <div class="row">
+      <div class="col-1">
+    <a href="/"><img class="ml" id="ml" src="l.png" width="90px"
+        style="position: relative;top:-10px"></a>
+      </div>
+      <div class="col-7" id="si">
+        <div id="search-interface1">
+                <div class="search-box1">
+                  <input type="text" id="search-input1" placeholder="Поиск 🔍">
+                  <button id="search-button1" style="display: none;">Найти</button>
+                </div>
+
+                <div id="search-results1">
+                  <div id="results-container1"></div>
+                </div>
+              </div>
+      </div>
+      <div class="col-2">
+    <a onclick="openMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+  <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+</svg><p> Меню</p></a></div>
+    <div class="col-1"><div class="ds">
+      <label id="switch" class="switch">
+        <input type="checkbox" onchange="toggleTheme()" id="slider">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    </div>
+    </div>
+  </div>
+
+  <section class="bsb-faq-3 py-3 py-md-5 py-xl-8">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+          <h2 class="mb-4 display-5 text-center">#АвеХаб</h2>
+          <p class="text-secondary text-center lead fs-4">Этот сайт создан для студентов АВТФ (для начала - студентов потока АБ/АБс/Аи 2025 года)</p>
+          <p class="mb-5 text-center">Будем рады, если предложите материалы для сайта. </p>
+          <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="menu" class="menu">
+      <div class="menu-content">
+
+        <div class="container">          
+        <div class="row" style="margin-bottom: -1.5%;">
+          <div class="col-md-10">
+        <div class="time-widget">
+        <div class="time" id="time"></div>
+        <div class="date" id="date"></div>
+        <div class="week" id="week"></div>
+        <div class="date" id="datek"></div>
+        <div class="week" id="weekk"></div>
+    </div><script>
+        // Обновление каждую секунду
+        setInterval(updateWidget, 1000);
+        // Первоначальный запуск
+        updateWidget();
+        </script></div>
+          <div class="row">
+            <div class="col-1">
+              <a href="/"><img class="ml" id="ml" src="l.png" width="140px"
+                  style="position: relative;top:-10px"></a>
+            </div>
+            <div class="col-11">
+        <div id="search-interface">
+                <div class="search-box">
+                  <input type="text" id="search-input" placeholder="Поиск 🔍">
+                  <button id="search-button" style="display: none;">Найти</button>
+                </div>
+                <div id="search-results">
+                  <div id="results-container"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-1">
+              <span class="close" onclick="closeMenu()">&times;</span>
+            </div>
+          </div>
+
+          </div>
+          <div class="row">
+            <div class="col">
+              <h3 align="center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+  <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+</svg> Меню</h3>
+                <ul class="men">
+              <li><a href="/"><span>Главная</span></a></li>
+              <li><a href="/lec.html"><span>Лекции</span></a></li>
+              <li><a href="#"><span>Практики</span></a></li>
+              <li><a href="#"><span>ПО</span></a></li>
+              <li><a href="#"><span>Материалы</span></a></li>
+              <li><a href="#"><span>Учебники</span></a></li>
+              <li><a href="#"><span>APK</span></a></li>
+              </ul>
+              <h3 align="center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+  <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/>
+  <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+</svg> Конспекты</h3>
+              <ul class="men">
+              <li><a href="#"><span>ЛинАл</span></a></li>
+              <li><a href="#"><span>ОЛЛК</span></a></li>
+              <li><a href="#"><span>История</span></a></li>
+              <li><a href="#"><span>МатАнализ</span></a></li>
+            </ul>
+            </div>
+            <div class="col">
+              <h3 align="center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+  <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
+</svg> Группы</h3>
+                              <ul class="men">
+              <li><a href="#"><span>АБ-520</span></a></li>
+              <li><a href="#"><span>АБ-521</span></a></li>
+              <li><a href="#"><span>АБ-522</span></a></li>
+              <li><a href="#"><span>АБ-523</span></a></li>
+              <li><a href="#"><span>АБс-524</span></a></li>
+              <li><a href="#"><span>АБс-525</span></a></li>
+              <li><a href="#"><span>АБс-526</span></a></li>
+              <li><a href="#"><span>АБс-527</span></a></li>
+              <li><a href="#"><span>АИ-52</span></a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3 align="center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-rocket-takeoff" viewBox="0 0 16 16">
+  <path d="M9.752 6.193c.599.6 1.73.437 2.528-.362s.96-1.932.362-2.531c-.599-.6-1.73-.438-2.528.361-.798.8-.96 1.933-.362 2.532"/>
+  <path d="M15.811 3.312c-.363 1.534-1.334 3.626-3.64 6.218l-.24 2.408a2.56 2.56 0 0 1-.732 1.526L8.817 15.85a.51.51 0 0 1-.867-.434l.27-1.899c.04-.28-.013-.593-.131-.956a9 9 0 0 0-.249-.657l-.082-.202c-.815-.197-1.578-.662-2.191-1.277-.614-.615-1.079-1.379-1.275-2.195l-.203-.083a10 10 0 0 0-.655-.248c-.363-.119-.675-.172-.955-.132l-1.896.27A.51.51 0 0 1 .15 7.17l2.382-2.386c.41-.41.947-.67 1.524-.734h.006l2.4-.238C9.005 1.55 11.087.582 12.623.208c.89-.217 1.59-.232 2.08-.188.244.023.435.06.57.093q.1.026.16.045c.184.06.279.13.351.295l.029.073a3.5 3.5 0 0 1 .157.721c.055.485.051 1.178-.159 2.065m-4.828 7.475.04-.04-.107 1.081a1.54 1.54 0 0 1-.44.913l-1.298 1.3.054-.38c.072-.506-.034-.993-.172-1.418a9 9 0 0 0-.164-.45c.738-.065 1.462-.38 2.087-1.006M5.205 5c-.625.626-.94 1.351-1.004 2.09a9 9 0 0 0-.45-.164c-.424-.138-.91-.244-1.416-.172l-.38.054 1.3-1.3c.245-.246.566-.401.91-.44l1.08-.107zm9.406-3.961c-.38-.034-.967-.027-1.746.163-1.558.38-3.917 1.496-6.937 4.521-.62.62-.799 1.34-.687 2.051.107.676.483 1.362 1.048 1.928.564.565 1.25.941 1.924 1.049.71.112 1.429-.067 2.048-.688 3.079-3.083 4.192-5.444 4.556-6.987.183-.771.18-1.345.138-1.713a3 3 0 0 0-.045-.283 3 3 0 0 0-.3-.041Z"/>
+  <path d="M7.009 12.139a7.6 7.6 0 0 1-1.804-1.352A7.6 7.6 0 0 1 3.794 8.86c-1.102.992-1.965 5.054-1.839 5.18.125.126 3.936-.896 5.054-1.902Z"/>
+</svg> Ресурсы</h3>
+                              <ul class="men">
+              <li><a href="#"><span>НГТУ</span></a></li>
+              <li><a href="#"><span>ЛК НГТУ</span></a></li>
+              <li><a href="#"><span>DiSpace</span></a></li>
+              <li><a href="#"><span>YourNETI</span></a></li>
+              <li><a href="#"><span>АВТФ</span></a></li>
+              <li><a href="#"><span>cprog</span></a></li>
+              <li><a href="#"><span>DeepSeek</span></a></li>
+              <li><a href="#"><span>Qwen</span></a></li>
+              <li><a href="#"><span>PhotoMath</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <a href="#">
+    <div class="bt">
+      <p style="text-decoration: none;">^</p>
+    </div>
+  </a>
+  <!-- Мероприятие -->
+  <div class="mb-8">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-11 col-xl-10">
+          <div class="d-flex align-items-end mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="var(--font-color)"
+              class="bi bi-calendar-event" viewBox="0 0 16 16">
+              <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
+              <path
+                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+            </svg>
+            <h3 class="m-0">&nbsp;&nbsp;&nbsp;Мероприятие</h3>
+          </div>
+        </div>
+        <div class="col-11 col-xl-10">
+          <div class="accordion accordion-flush" id="faqRefund">
+            <div class="accordion-item bg-transparent border-top border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading1">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse1" aria-expanded="false"
+                  aria-controls="faqRefundCollapse1">
+                  <p class="cv">Когда состоится очный этап Долины Технологий?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse1" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading1">
+                <div class="accordion-body">
+                  <p>13 и 14 июня</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading2">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse2" aria-expanded="false"
+                  aria-controls="faqRefundCollapse2">
+                  <p class="cv">Сколько будет длиться пребывание в офисе (время проведения Долины Технологий)?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse2" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading2">
+                <div class="accordion-body">
+                  <p>Предварительно с 10:00 до 18:00</p>
+                  <ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading3">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse3" aria-expanded="false"
+                  aria-controls="faqRefundCollapse3">
+                  <p class="cv">Где будет проводиться?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse3" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading3">
+                <div class="accordion-body">
+                  <p>В офисе Лаборатории Касперского в Москве по адресу: метро Водный Стадион, Ленинградское шоссе
+                    39А с.2. и на площадке Double Tree, по адресу Ленинградское шоссе 39 с.1.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading4">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse4" aria-expanded="false"
+                  aria-controls="faqRefundCollapse4">
+                  <p class="cv">Когда расписание очного этапа?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse4" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading4">
+                <div class="accordion-body">
+                  <p>Скорее всего в день проведения.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading5">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse5" aria-expanded="false"
+                  aria-controls="faqRefundCollapse5">
+                  <p class="cv">Кто является главным организатором Долины Технологий?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse5" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading5">
+                <div class="accordion-body">
+                  <p>Юлия Сергеевна Феоктистова, менеджер образовательных программ</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading6">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse6" aria-expanded="false"
+                  aria-controls="faqRefundCollapse6">
+                  <p class="cv">Что делать если нет ноутбука своего?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse6" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading6">
+                <div class="accordion-body">
+                  <p>Неизвестно. Возможно, выдадут гостевые слабые ноутбуки.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading7">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse7" aria-expanded="false"
+                  aria-controls="faqRefundCollapse7">
+                  <p class="cv">Что нужно будет на практике?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse7" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading7">
+                <div class="accordion-body">
+                  <p>Скоро скинут список ПО. Потребуется Linux на виртуальной машине.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading8">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse8" aria-expanded="false"
+                  aria-controls="faqRefundCollapse8">
+                  <p class="cv">Что перед очным этапом будет?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse8" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading8">
+                <div class="accordion-body">
+                  <p>Интенсивное предобучение перед очной практикой. Также стоит смотреть вебинар 4 июня.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading9">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse9" aria-expanded="false"
+                  aria-controls="faqRefundCollapse9">
+                  <p class="cv">Будет личный рейтинг?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse9" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading9">
+                <div class="accordion-body">
+                  <p>Не будет.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading10">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse10" aria-expanded="false"
+                  aria-controls="faqRefundCollapse10">
+                  <p class="cv">Разделят ли по направлениям, или все вместе будут проходить одну и ту же практику?
+                  </p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse10" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading10">
+                <div class="accordion-body">
+                  <p>Все вместе</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading11">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse11" aria-expanded="false"
+                  aria-controls="faqRefundCollapse11">
+                  <p class="cv">Обязателен ли выбор ОС Windows?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse11" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading11">
+                <div class="accordion-body">
+                  <p>Можно выбрать любую ОС, главное чтобы установились программы из раздела ПО (вопрос ниже)</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading12">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse12" aria-expanded="false"
+                  aria-controls="faqRefundCollapse12">
+                  <p class="cv">Какое ПО необходимо установить на ноутбук для очного этапа?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse12" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading12">
+                <div class="accordion-body">
+                  <p>Посмотреть список ПО можно на <a
+                      href="https://safeboardkaspersky.teachbase.ru/viewer/sessions/826395/materials/3022719">Тичбейсе</a>
+                    или в разделе <a href="/soft/">ПО на этом сайте</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading13">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse13" aria-expanded="false"
+                  aria-controls="faqRefundCollapse13">
+                  <p class="cv">Где найти дополнительные материалы для подготовки?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse13" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading13">
+                <div class="accordion-body">
+                  <p>Посмотреть материалы можно на <a
+                      href="https://safeboardkaspersky.teachbase.ru/viewer/sessions/826395/materials/3022716">Тичбейсе</a>
+                    или в разделе <a href="/pin/">материалы на этом сайте</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Участие-->
+  <div class="mb-8">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-11 col-xl-10">
+          <div class="d-flex align-items-end mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="var(--font-color)"
+              class="bi bi-file-earmark" viewBox="0 0 16 16">
+              <path
+                d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z" />
+            </svg>
+            <h3 class="m-0">&nbsp;&nbsp;&nbsp;Участие</h3>
+          </div>
+        </div>
+        <div class="col-11 col-xl-10">
+          <div class="accordion accordion-flush" id="faqRefund">
+            <div class="accordion-item bg-transparent border-top border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading1">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse1" aria-expanded="false"
+                  aria-controls="faqRefundCollapse1">
+                  <p class="cv">Обязательно ли наличие сопровождающего на протяжении всей практики?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse1" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading1">
+                <div class="accordion-body">
+                  <p>Наличие сопровождающего обязательно для всех несовершеннолетних участников, живущих за
+                    пределами Москвы и МО. Для соверешеннолетних участников наличие сопровождающего по желанию.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading2">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse2" aria-expanded="false"
+                  aria-controls="faqRefundCollapse2">
+                  <p class="cv">Смогут ли присутствовать сопровождающие на занятиях?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse2" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading2">
+                <div class="accordion-body">
+                  <p>Практика не предусматривает программу для сопровождающих, то есть они не смогут находится на
+                    занятиях.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading3">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse3" aria-expanded="false"
+                  aria-controls="faqRefundCollapse3">
+                  <p class="cv">Будет ли донабор участников на очную часть?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse3" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading3">
+                <div class="accordion-body">
+                  <p>Вторая волна предварительно будет 3го июня объявлена. Если будут "отваливаться" 10 классы -
+                    то донабор из 10 классов, если 8-9 - то из 8-9 соответственно.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading4">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse4" aria-expanded="false"
+                  aria-controls="faqRefundCollapse4">
+                  <p class="cv">Какого числа необходимо быть на месте?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse4" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading4">
+                <div class="accordion-body">
+                  <p>12 июня состоится заезд в отель. Можно приехать 13, но скорее всего будете уставшим после
+                    дороги. Раньше возможно, но за свой счёт проживание оплачивается.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading5">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse5" aria-expanded="false"
+                  aria-controls="faqRefundCollapse5">
+                  <p class="cv">Какого числа необходимо возвращаться обратно?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse5" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading5">
+                <div class="accordion-body">
+                  <p>14 июня вечером, но если вы вдруг хотите погулять по Москве, то проживание - за ваш счет, а
+                    билеты обратные можно бронировать на более позднюю дату</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading6">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse6" aria-expanded="false"
+                  aria-controls="faqRefundCollapse6">
+                  <p class="cv">Какие требуются документы для участия?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse6" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading6">
+                <div class="accordion-body">
+                  <p>Из того, что известно: справка о классе обучения из школы/колледжа, паспорт.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading7">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse7" aria-expanded="false"
+                  aria-controls="faqRefundCollapse7">
+                  <p class="cv">Как определяется рейтинг резерва?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse7" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading6">
+                <div class="accordion-body">
+                  <p>Исходя из домашнего задания.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading7">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse8" aria-expanded="false"
+                  aria-controls="faqRefundCollapse8">
+                  <p class="cv">Кто может быть сопровождающим?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse8" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading7">
+                <div class="accordion-body">
+                  <p>Несовершенно летнего участника должен сопровождать один из родителей или другой взрослый
+                    (предпочтительно, родственник) с нотариально заверенной доверенностью от родителей участника
+                    на сопровождение. Сопровождающий отвечает за безопасность участника в течение всего времени
+                    поездки, за исключением случаев, когда участник находится на занятиях в «Лаборатории
+                    Касперского».</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading9">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse9" aria-expanded="false"
+                  aria-controls="faqRefundCollapse9">
+                  <p class="cv">Какова организация питания?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse9" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading9">
+                <div class="accordion-body">
+                  <p>Кормить будут только участников без сопровождающих. Завтрак в отеле для всех.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading10">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse10" aria-expanded="false"
+                  aria-controls="faqRefundCollapse10">
+                  <p class="cv">Что должно быть указано в справке?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse10" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading10">
+                <div class="accordion-body">
+                  <p>Класс обучения</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqRefundHeading11">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqRefundCollapse11" aria-expanded="false"
+                  aria-controls="faqRefundCollapse11">
+                  <p class="cv">Возможно ли предоставить доверенность, оформленную в другом городе, в электронном
+                    виде (скан)?</p>
+                </button>
+              </h2>
+              <div id="faqRefundCollapse11" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading11">
+                <div class="accordion-body">
+                  <p>Да</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Проживание-->
+  <div class="mb-8">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-11 col-xl-10">
+          <div class="d-flex align-items-end mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="var(--font-color)" class="bi bi-house"
+              viewBox="0 0 16 16">
+              <path
+                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+            </svg>
+            <h3 class="m-0">&nbsp;&nbsp;&nbsp;Проживание</h3>
+          </div>
+        </div>
+        <div class="col-11 col-xl-10">
+          <div class="accordion accordion-flush" id="faqAccount">
+            <div class="accordion-item bg-transparent border-top border-bottom py-3">
+              <h2 class="accordion-header" id="faqAccountHeading1">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse1" aria-expanded="false"
+                  aria-controls="faqAccountCollapse1">
+                  <p class="cv">Оплачивается ли проживание?</p>
+                </button>
+              </h2>
+              <div id="faqAccountCollapse1" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading1">
+                <div class="accordion-body">
+                  <p>Да, полностью оплачивается для участника и сопровождающего.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqAccountHeading2">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse2" aria-expanded="false"
+                  aria-controls="faqAccountCollapse2">
+                  <p class="cv">Где будет проживание?</p>
+                </button>
+              </h2>
+              <div id="faqAccountCollapse2" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading2">
+                <div class="accordion-body">
+                  <p>Отель DoubleTree by Hilton Moscow – Marina, расположенный в пешей доступности от офиса
+                    «Лаборатории Касперского» по адресу Ленинградское шоссе 39А с.2.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqAccountHeading3">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse3" aria-expanded="false"
+                  aria-controls="faqAccountCollapse3">
+                  <p class="cv">Какой номер будет снят?</p>
+                </button>
+              </h2>
+              <div id="faqAccountCollapse3" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading3">
+                <div class="accordion-body">
+                  <p>Двухместный номер с завтраком</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqAccountHeading4">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse4" aria-expanded="false"
+                  aria-controls="faqAccountCollapse4">
+                  <p class="cv">На сколько времени будет снят номер?</p>
+                </button>
+              </h2>
+              <div id="faqAccountCollapse4" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading4">
+                <div class="accordion-body">
+                  <p>На 2 ночи (с 12 по 14 июня, с 12 на 13 и с 13 на 14)</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqAccountHeading5">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse5" aria-expanded="false"
+                  aria-controls="faqAccountCollapse5">
+                  <p class="cv">Каково время заезда и выезда?</p>
+                </button>
+              </h2>
+              <div id="faqAccountCollapse5" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading5">
+                <div class="accordion-body">
+                  <p>Заезд стандартно в 14:00, выезд до 12:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Проезд -->
+  <div class="mb-0">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-11 col-xl-10">
+          <div class="d-flex align-items-end mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="var(--font-color)"
+              class="bi bi-airplane" viewBox="0 0 16 16">
+              <path
+                d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-.458.158-.678.599" />
+            </svg>
+            <h3 class="m-0">&nbsp;&nbsp;&nbsp;Проезд</h3>
+          </div>
+        </div>
+        <div class="col-11 col-xl-10">
+          <div class="accordion accordion-flush" id="faqOrder">
+            <div class="accordion-item bg-transparent border-top border-bottom py-3">
+              <h2 class="accordion-header" id="faqOrderHeading1">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqOrderCollapse1" aria-expanded="false"
+                  aria-controls="faqOrderCollapse1">
+                  <p class="cv">Оплачивается ли проезд?</p>
+                </button>
+              </h2>
+              <div id="faqOrderCollapse1" class="accordion-collapse collapse" aria-labelledby="faqOrderHeading1">
+                <div class="accordion-body">
+                  <p>Да, проезд полностью оплачивается для участника и сопровождающего</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqOrderHeading2">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqOrderCollapse2" aria-expanded="false"
+                  aria-controls="faqOrderCollapse2">
+                  <p class="cv">Как происходит выбор маршрута проезда?</p>
+                </button>
+              </h2>
+              <div id="faqOrderCollapse2" class="accordion-collapse collapse" aria-labelledby="faqOrderHeading2">
+                <div class="accordion-body">
+                  <p>Маршрут, тип транспорта (поезд или самолёт), рейс (время) и т.п. подбираете самостоятельно.
+                    Лаборатория Касперского только оплачивает билеты.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqOrderHeading3">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqOrderCollapse3" aria-expanded="false"
+                  aria-controls="faqOrderCollapse3">
+                  <p class="cv">Какой класс самолёта можно выбрать?</p>
+                </button>
+              </h2>
+              <div id="faqOrderCollapse3" class="accordion-collapse collapse" aria-labelledby="faqOrderHeading3">
+                <div class="accordion-body">
+                  <p>Только эконом-класс. Билет без багажа</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqOrderHeading4">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqOrderCollapse4" aria-expanded="false"
+                  aria-controls="faqOrderCollapse4">
+                  <p class="cv">Какую авиакомпанию выбрать?</p>
+                </button>
+              </h2>
+              <div id="faqOrderCollapse4" class="accordion-collapse collapse" aria-labelledby="faqOrderHeading4">
+                <div class="accordion-body">
+                  <p>Вам будет удобнее прилетать в Шереметьево, от него сильно ближе до отеля. Например, аэрофлот
+                    туда летает.
+                    Самых худший вариант - Домодедово (S7), до отеля будете ехать часа 2. Внуково средненько,
+                    ехать 1-1,5 часа до отеля.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqOrderHeading5">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqOrderCollapse5" aria-expanded="false"
+                  aria-controls="faqOrderCollapse5">
+                  <p class="cv">Как происходит покупка билетов?</p>
+                </button>
+              </h2>
+              <div id="faqOrderCollapse5" class="accordion-collapse collapse" aria-labelledby="faqOrderHeading5">
+                <div class="accordion-body">
+                  <p>От участников информация о рейсах - организаторы покупают билеты и скидывают.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqOrderHeading6">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqOrderCollapse6" aria-expanded="false"
+                  aria-controls="faqOrderCollapse6">
+                  <p class="cv">Что нужно предоставить для заезда?</p>
+                </button>
+              </h2>
+              <div id="faqOrderCollapse6" class="accordion-collapse collapse" aria-labelledby="faqOrderHeading6">
+                <div class="accordion-body">
+                  <p>Вот что нужно предоставить для покупки билетов и бронирования отеля. Обратите внимание на
+                    формат! Просьба присылать на почту именно в таком виде с темой письма «Билеты из <город>».
+                      Просьба прислать информацию до конца завтрашнего дня (до конца дня 4 июня).
+                      <br>
+                      1. Участник – Фамилия Имя Отчество. <br>
+                      Серия и номер паспорта 8015 000000. <br>
+                      Дата рождения 15.12.2000. <br>
+                      Дата выдачи паспорта 23.12.2014 <br>
+                      Мобильный телефон 8-917-440-00-42 <br>
+                      E-mail: yulyafeos@mail.ru <br>
+
+                      2. Сопровождающий – Фамилия Имя Отчество.<br>
+                      Кем является участнику: (пример: Мамой, папой, бабушкой и т.д.) <br>
+                      Серия и номер паспорта 8015 000000. <br>
+                      Дата рождения 17.11.1970. <br>
+                      Дата выдачи паспорта 20.12.2000<br>
+                      Мобильный телефон 8-917-000-00-00 <br>
+                      E-mail: yulyafeos2@mail.ru <br>
+
+
+                      Рейс (пример с самолетом): <br>
+                      Из Санкт-Петербурга до Москвы: 12.06 Рейс SU 0011, вылет 10.40, прилет 12.10 <br>
+                      Из Москвы до Санкт-Петербурга: 14.06 Рейс SU 0032, вылет 21.00, прилет 22.30 <br>
+
+                      Рейс (пример с поездом): <br>
+                      Из Нижнего Новгорода в Москву 12.06.2023 Поезд 733г Ласточка в 17:54 отправление, в 22:03
+                      прибытие <br>
+                      Из Москвы в Нижний Новгород 14.06.2023 Поезд 721 Р Ласточка в 20:57 отправление, в 01:13
+                      прибытие <br>
+
+                      ВАЖНО-1: <br>
+                      Если вас сопровождает не мама или папа, которые являются вашими законными представителями,
+                      просьба приложить к письму доверенность от мамы и папы на сопровождение вас другим взрослым.
+                      <br>
+                      ВАЖНО-2: <br>
+                      Приложить фото паспортов в письмо
+                      <br>
+                      ВАЖНО-3: <br>
+                      Если вы переживаете, что закончатся билеты (напишите 2 или 3 варианта рейсов, указав какой
+                      вариант приоритетен).</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqOrderHeading7">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqOrderCollapse7" aria-expanded="false"
+                  aria-controls="faqOrderCollapse7">
+                  <p class="cv">Купе или плацкарт?</p>
+                </button>
+              </h2>
+              <div id="faqOrderCollapse7" class="accordion-collapse collapse" aria-labelledby="faqOrderHeading7">
+                <div class="accordion-body">
+                  <p>На Ваш вкус.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqOrderHeading8">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqOrderCollapse8" aria-expanded="false"
+                  aria-controls="faqOrderCollapse8">
+                  <p class="cv">Возможна компенсация билетов?</p>
+                </button>
+              </h2>
+              <div id="faqOrderCollapse8" class="accordion-collapse collapse" aria-labelledby="faqOrderHeading8">
+                <div class="accordion-body">
+                  <p>Мы не можем компенсировать билеты, только покупать сами. </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqOrderHeading9">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqOrderCollapse9" aria-expanded="false"
+                  aria-controls="faqOrderCollapse9">
+                  <p class="cv">Когда скинут билеты?</p>
+                </button>
+              </h2>
+              <div id="faqOrderCollapse9" class="accordion-collapse collapse" aria-labelledby="faqOrderHeading9">
+                <div class="accordion-body">
+                  <p>Когда купят. Но закупка билетов - процесс, который требует согласования нескольких отделов,
+                    поэтому это не очень быстрый процесс, к сожалению. На этой неделе точно не успеем закупить
+                    (очень хотели, но еще не все согласования получены). Однако уже выслали на почту первую партию
+                    билетов, которую уже успели купить.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom py-3">
+              <h2 class="accordion-header" id="faqOrderHeading10">
+                <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faqOrderCollapse10" aria-expanded="false"
+                  aria-controls="faqOrderCollapse10">
+                  <p class="cv">Нормально что билеты пришли со страного адреса?</p>
+                </button>
+              </h2>
+              <div id="faqOrderCollapse10" class="accordion-collapse collapse" aria-labelledby="faqOrderHeading10">
+                <div class="accordion-body">
+                  <p id="bpso7">Да. Пришлют оба билета со своего адреса попозже</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <script>
+      // Скрипт для подсветки найденных слов на странице
+      (function () {
+        // Получаем поисковый запрос из URL параметров
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('search');
+
+        if (searchQuery && searchQuery.length >= 2) {
+          // Функция для подсветки текста
+          function highlightText(element, searchText) {
+            const regex = new RegExp(`(${searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+
+            // Обходим все текстовые узлы
+            const walker = document.createTreeWalker(
+              element,
+              NodeFilter.SHOW_TEXT,
+              null,
+              false
+            );
+
+            const nodes = [];
+            let node;
+            while (node = walker.nextNode()) {
+              if (node.textContent.trim().length > 0) {
+                nodes.push(node);
+              }
+            }
+
+            nodes.forEach(node => {
+              const parent = node.parentNode;
+              if (parent.nodeName !== 'SCRIPT' && parent.nodeName !== 'STYLE') {
+                const highlighted = node.textContent.replace(regex, '<mark class="search-highlight">$1</mark>');
+                if (highlighted !== node.textContent) {
+                  const newElement = document.createElement('span');
+                  newElement.innerHTML = highlighted;
+                  parent.replaceChild(newElement, node);
+                }
+              }
+            });
+          }
+
+          // Подсвечиваем текст на всей странице
+          highlightText(document.body, searchQuery);
+
+          // Прокручиваем к первому найденному элементу
+          const firstHighlight = document.querySelector('mark.search-highlight');
+          if (firstHighlight) {
+            setTimeout(() => {
+              firstHighlight.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+              });
+
+              // Добавляем анимацию мигания для первого результата
+              firstHighlight.style.transition = 'all 0.5s ease';
+              firstHighlight.style.backgroundColor = '#ff6b6b';
+              setTimeout(() => {
+                firstHighlight.style.backgroundColor = '#ffeaa7';
+              }, 1000);
+            }, 100);
+          }
+
+          // Добавляем стили для подсветки
+          const style = document.createElement('style');
+          style.textContent = `
+            mark.search-highlight {
+                background-color: #ffeaa7;
+                padding: 2px 4px;
+                border-radius: 3px;
+                font-weight: bold;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .search-info {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #3498db;
+                color: white;
+                padding: 10px 15px;
+                border-radius: 5px;
+                font-size: 14px;
+                z-index: 1000;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            }
+            .search-info button {
+                background: #e74c3c;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 3px;
+                cursor: pointer;
+                margin-left: 10px;
+            }
+        `;
+          document.head.appendChild(style);
+
+          // Добавляем информационную панель
+          const searchInfo = document.createElement('div');
+          searchInfo.className = 'search-info';
+          searchInfo.innerHTML = `
+            Найдено по запросу: "<strong>${searchQuery}</strong>"
+            <button onclick="this.parentElement.remove()">×</button>
+        `;
+          document.body.appendChild(searchInfo);
+
+          // Автоматически скрываем панель через 5 секунд
+          setTimeout(() => {
+            if (searchInfo.parentElement) {
+              searchInfo.remove();
+            }
+          }, 5000);
+        }
+      })();
+  </script>
+  <!-- Добавьте этот код в конец каждого HTML-файла -->
+  <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="search.js"></script>
+</body>
+
+</html>

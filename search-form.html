@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск по сайту</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h1>🔍 Поиск по сайту</h1>
+        
+        <div id="search-interface">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Введите поисковый запрос...">
+                <button id="search-button">Найти</button>
+            </div>
+            
+            <div id="file-list-container"></div>
+            
+            <div id="search-results">
+                <div id="results-container"></div>
+            </div>
+        </div>
+    </div>
+<script src="search.js"></script>
+</body>
+</html>
