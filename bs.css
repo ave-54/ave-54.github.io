@@ -5324,7 +5324,9 @@ fieldset:disabled .btn {
 .accordion-body {
     padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x)
 }
-
+.accordion-body img{
+    width: 100%;
+}
 .accordion-flush>.accordion-item {
     border-right: 0;
     border-left: 0;
