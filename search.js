@@ -1912,7 +1912,7 @@
     </div>
   </section>
                 `
-            },
+            }/*,
             {
                 id: 'pin',
                 fileName: 'pin.html',
@@ -2202,7 +2202,7 @@
   </ol>
 </div></div></div>
                 `
-            }/*,
+            },
             {
                 id: 'contact',
                 fileName: 'contact.html',
