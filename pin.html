@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="js.js">
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/97458522" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+
+  <link rel="stylesheet" href="bs.css">
+  <link rel="stylesheet" href="faq.css">
+  <title>Материалы#АвеХаб</title>
+</head>
+
+<body class="aa">
+  <div class="navb" id="navb">
+    <div class="row">
+      <div class="col-1">
+    <a href="/"><img class="ml" id="ml" src="l.png" width="90px"
+        style="position: relative;top:-10px"></a>
+      </div>
+      <div class="col-7" id="si">
+        <div id="search-interface1">
+                <div class="search-box1">
+                  <input type="text" id="search-input1" placeholder="Поиск 🔍">
+                  <button id="search-button1" style="display: none;">Найти</button>
+                </div>
+
+                <div id="search-results1">
+                  <div id="results-container1"></div>
+                </div>
+              </div>
+      </div>
+      <div class="col-2">
+    <a onclick="openMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+  <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+</svg><p> Меню</p></a></div>
+    <div class="col-1"><div class="ds">
+      <label id="switch" class="switch">
+        <input type="checkbox" onchange="toggleTheme()" id="slider">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    </div>
+    </div>
+  </div>
+      <div id="menu" class="menu">
+      <div class="menu-content">
+
+        <div class="container">
+          <div class="row" style="margin-bottom: -1.5%;">
+            <div class="col-md-10">
+              <div class="time-widget">
+                <div class="time" id="time"></div>
+                <div class="date" id="date"></div>
+                <div class="week" id="week"></div>
+                <div class="date" id="datek"></div>
+                <div class="week" id="weekk"></div>
+              </div>
+              <script>
+                // Обновление каждую секунду
+                setInterval(updateWidget, 1000);
+                // Первоначальный запуск
+                updateWidget();
+              </script>
+            </div>
+            <div class="row">
+              <div class="col-1">
+                <a href="/"><img class="ml" id="ml" src="l.png" width="140px" style="position: relative;top:-10px"></a>
+              </div>
+              <div class="col-11">
+                <div id="search-interface">
+                  <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Поиск 🔍">
+                    <button id="search-button" style="display: none;">Найти</button>
+                  </div>
+                  <div id="search-results">
+                    <div id="results-container"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-1">
+                <span class="close" onclick="closeMenu()">&times;</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col">
+              <h3 align="center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                  class="bi bi-house" viewBox="0 0 16 16">
+                  <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                </svg> Меню</h3>
+              <ul class="men">
+                <li><a href="/"><span>Главная</span></a></li>
+                <li><a href="/lec.html"><span>Лекции</span></a></li>
+                <li><a href="/pr.html"><span>Практики</span></a></li>
+                <li><a href="/soft.html"><span>ПО</span></a></li>
+                <li><a href="/pin.html"><span>Материалы</span></a></li>
+                <li><a href="/books.html"><span>Учебники</span></a></li>
+                <li><a href="/ave.apk"><span>APK</span></a></li>
+              </ul>
+              <h3 align="center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                  class="bi bi-compass" viewBox="0 0 16 16">
+                  <path
+                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                  <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                </svg> Конспекты</h3>
+              <ul class="men">
+                <li><a href="/lec.html#linal"><span>ЛинАл</span></a></li>
+                <li><a href="/lec.html#olkk"><span>ОЛКК</span></a></li>
+                <li><a href="/lec.html#istoria"><span>История</span></a></li>
+                <li><a href="/lec.html#matan"><span>МатАнализ</span></a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3 align="center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                  class="bi bi-people" viewBox="0 0 16 16">
+                  <path
+                    d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
+                </svg> Группы</h3>
+              <ul class="men">
+                <li><a href="#"><span>АБ-520</span></a></li>
+                <li><a href="#"><span>АБ-521</span></a></li>
+                <li><a href="#"><span>АБ-522</span></a></li>
+                <li><a href="#"><span>АБ-523</span></a></li>
+                <li><a href="#"><span>АБс-524</span></a></li>
+                <li><a href="#"><span>АБс-525</span></a></li>
+                <li><a href="#"><span>АБс-526</span></a></li>
+                <li><a href="#"><span>АБс-527</span></a></li>
+                <li><a href="#"><span>АИ-52</span></a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3 align="center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                  class="bi bi-rocket-takeoff" viewBox="0 0 16 16">
+                  <path
+                    d="M9.752 6.193c.599.6 1.73.437 2.528-.362s.96-1.932.362-2.531c-.599-.6-1.73-.438-2.528.361-.798.8-.96 1.933-.362 2.532" />
+                  <path
+                    d="M15.811 3.312c-.363 1.534-1.334 3.626-3.64 6.218l-.24 2.408a2.56 2.56 0 0 1-.732 1.526L8.817 15.85a.51.51 0 0 1-.867-.434l.27-1.899c.04-.28-.013-.593-.131-.956a9 9 0 0 0-.249-.657l-.082-.202c-.815-.197-1.578-.662-2.191-1.277-.614-.615-1.079-1.379-1.275-2.195l-.203-.083a10 10 0 0 0-.655-.248c-.363-.119-.675-.172-.955-.132l-1.896.27A.51.51 0 0 1 .15 7.17l2.382-2.386c.41-.41.947-.67 1.524-.734h.006l2.4-.238C9.005 1.55 11.087.582 12.623.208c.89-.217 1.59-.232 2.08-.188.244.023.435.06.57.093q.1.026.16.045c.184.06.279.13.351.295l.029.073a3.5 3.5 0 0 1 .157.721c.055.485.051 1.178-.159 2.065m-4.828 7.475.04-.04-.107 1.081a1.54 1.54 0 0 1-.44.913l-1.298 1.3.054-.38c.072-.506-.034-.993-.172-1.418a9 9 0 0 0-.164-.45c.738-.065 1.462-.38 2.087-1.006M5.205 5c-.625.626-.94 1.351-1.004 2.09a9 9 0 0 0-.45-.164c-.424-.138-.91-.244-1.416-.172l-.38.054 1.3-1.3c.245-.246.566-.401.91-.44l1.08-.107zm9.406-3.961c-.38-.034-.967-.027-1.746.163-1.558.38-3.917 1.496-6.937 4.521-.62.62-.799 1.34-.687 2.051.107.676.483 1.362 1.048 1.928.564.565 1.25.941 1.924 1.049.71.112 1.429-.067 2.048-.688 3.079-3.083 4.192-5.444 4.556-6.987.183-.771.18-1.345.138-1.713a3 3 0 0 0-.045-.283 3 3 0 0 0-.3-.041Z" />
+                  <path
+                    d="M7.009 12.139a7.6 7.6 0 0 1-1.804-1.352A7.6 7.6 0 0 1 3.794 8.86c-1.102.992-1.965 5.054-1.839 5.18.125.126 3.936-.896 5.054-1.902Z" />
+                </svg> Ресурсы</h3>
+              <ul class="men">
+                <li><a href="https://www.nstu.ru/"><span>НГТУ</span></a></li>
+                <li><a href="https://ciu.nstu.ru/student_study"><span>ЛК НГТУ</span></a></li>
+                <li><a href="https://dispace.edu.nstu.ru/"><span>DiSpace</span></a></li>
+                <li><a href="https://www.rustore.ru/catalog/app/com.yourneti"><span>YourNETI</span></a></li>
+                <li><a href="https://avtf.nstu.ru/"><span>АВТФ</span></a></li>
+                <li><a href="/cprog/"><span>cprog</span></a></li>
+                <li><a href="https://chat.deepseek.com/"><span>DeepSeek</span></a></li>
+                <li><a href="https://chat.qwen.ai/"><span>Qwen</span></a></li>
+                <li><a href="https://photomath.com"><span>PhotoMath</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <a href="#" ><div class="bt"><p style="text-decoration: none;">^</p></div></a>
+  <div class="container">
+    <div class="row">
+    <div class="col">
+  <h1 class="wbn">Материалы для обучения и полезная информация в сфере ИБ и в целом ИТ</h1>
+  <h3>Здесь всё?</h3>
+  <p>Здесь материалы, которые могут быть полезны как для вуза, так и в целом в сфере ИБ и ИТ. Коллекция будет постоянно обновляться</h3>
+   <p>&nbsp;</p>
+  <h3><span>Linux</span></h3>
+    <p><span>Статьи:</span></p>
+  <ol>
+    <li>
+      <p><a href="https://www.opennet.ru/docs/RUS/zlp" rel="noopener noreferrer nofollow"
+          target="_blank"><span>https://www.opennet.ru/docs/RUS/zlp</span></a><span
+          style="font-family: Kaspersky Sans Display, Kaspersky Sans Display_EmbeddedFont, Kaspersky Sans Display_MSFontService, sans-serif;">&nbsp;</span>
+      </p>
+    </li>
+    <li>
+      <p><a href="https://habr.com/ru/articles/724762/" rel="noopener noreferrer nofollow"
+          target="_blank"><span>https://habr.com/ru/articles/724762/</span></a><span
+          style="font-family: Kaspersky Sans Display, Kaspersky Sans Display_EmbeddedFont, Kaspersky Sans Display_MSFontService, sans-serif;">&nbsp;</span>
+      </p>
+    </li>
+  </ol>
+  <p>&nbsp;</p>
+  <h3><span>Гит, шифрование и разработка на С++</span></h3>
+  <p>Статьи:</p>
+  <ol>
+    <li>
+      <p><a href="https://learngitbranching.js.org/?locale=ru_RU" rel="noopener noreferrer nofollow"
+          target="_blank"><span>https://learngitbranching.js.org/?locale=ru_RU</span></a></p>
+    </li>
+    <li>
+      <p><a href="https://skills.github.com/" rel="noopener noreferrer nofollow"
+          target="_blank"><span>https://skills.github.com/</span></a><span
+          style="font-family: Calibri, Calibri_EmbeddedFont, Calibri_MSFontService, sans-serif;">&nbsp;</span></p>
+    </li>
+    <li>
+      <p><span>Поразрядные операции - </span><a class="Hyperlink SCXW219795205 BCX8"
+          href="https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/?ysclid=lw6c71z06i268216100"
+          rel="noopener noreferrer nofollow" target="_blank"><span>Bitwise Operators in C -
+            GeeksforGeeks</span></a><span
+          style="font-family: Calibri, Calibri_EmbeddedFont, Calibri_MSFontService, sans-serif;">&nbsp;</span></p>
+    </li>
+    <li>
+      <p><span>Работа с файлами - </span><a class="Hyperlink SCXW219795205 BCX8"
+          href="https://www.geeksforgeeks.org/basics-file-handling-c/" rel="noopener noreferrer nofollow"
+          target="_blank"><span>Basics of File Handling in C - GeeksforGeeks</span></a><span
+          style="font-family: Calibri, Calibri_EmbeddedFont, Calibri_MSFontService, sans-serif;">&nbsp;</span></p>
+    </li>
+    <li>
+      <p><span>Попробуй ещё реализовать xor шифрование&nbsp;</span><br /><a class="Hyperlink SCXW219795205 BCX8"
+          href="https://en.wikipedia.org/wiki/XOR_cipher" rel="noopener noreferrer nofollow" target="_blank"><span>XOR
+            cipher - Wikipedia</span></a><span>&nbsp;</span><br /><a class="Hyperlink SCXW219795205 BCX8"
+          href="https://translated.turbopages.org/proxy_u/en-ru.ru.a0df45cc-664350be-351da66e-74722d776562/https/www.geeksforgeeks.org/xor-cipher/"
+          rel="noopener noreferrer nofollow" target="_blank"><span>XOR Cipher - GeeksforGeeks (</span></a><a
+          href="http://turbopages.org" rel="noopener noreferrer nofollow"
+          target="_blank"><span>turbopages.org</span></a><a class="Hyperlink SCXW219795205 BCX8"
+          href="https://translated.turbopages.org/proxy_u/en-ru.ru.a0df45cc-664350be-351da66e-74722d776562/https/www.geeksforgeeks.org/xor-cipher/"
+          rel="noopener noreferrer nofollow" target="_blank"><span>)</span></a><span
+          style="font-family: Calibri, Calibri_EmbeddedFont, Calibri_MSFontService, sans-serif;">&nbsp;</span></p>
+    </li>
+  </ol>
+  <p>&nbsp;</p>
+  <h3>Frontend-разработка</h3>
+  <p>Материалы:</p>
+  <ol>
+    <li>
+      <p><a href="https://youtu.be/tw_2DoADWEY?si=r4FNW1JXUozWr8N9" rel="noopener noreferrer nofollow"
+          target="_blank"><span
+            style="font-family: -apple-system, BlinkMacSystemFont, Segoe UI, system-ui, Apple Color Emoji, Segoe UI Emoji, Segoe UI Web, sans-serif;">https://youtu.be/tw_2DoADWEY?si=r4FNW1JXUozWr8N9</span></a><span
+          style="font-family: -apple-system, BlinkMacSystemFont, Segoe UI, system-ui, Apple Color Emoji, Segoe UI Emoji, Segoe UI Web, sans-serif;">
+          - про реализацию запроса на сервер</span></p>
+    </li>
+    <li>
+      <p><a href="https://tproger.ru/translations/frontend-backend-interaction" rel="noopener noreferrer nofollow"
+          target="_blank"><span
+            style="font-family: -apple-system, BlinkMacSystemFont, Segoe UI, system-ui, Apple Color Emoji, Segoe UI Emoji, Segoe UI Web, sans-serif;">https://tproger.ru/translations/frontend-backend-interaction</span></a><span
+          style="font-family: -apple-system, BlinkMacSystemFont, Segoe UI, system-ui, Apple Color Emoji, Segoe UI Emoji, Segoe UI Web, sans-serif;">
+          - </span>простыми словами о &laquo;фронтенде&raquo; и &laquo;бэкенде&raquo;: что это такое и как они
+        взаимодействуют</p>
+    </li>
+  </ol>
+  <p>&nbsp;</p>
+  <h3>Backend-разработка</h3>
+  <p>Обязательно:</p>
+  <ol>
+    <li>
+      <p><a href="https://stepik.org/course/54403/promo" rel="noopener noreferrer nofollow"
+          target="_blank">https://stepik.org/course/54403/promo</a> &ndash; курс с базовым синтаксисом <strong>(можно
+          пройти до последней главы)</strong></p>
+    </li>
+    <li>
+      <p><a href="https://go.dev/tour/welcome/1" rel="noopener noreferrer nofollow"
+          target="_blank">https://go.dev/tour/welcome/1</a> &ndash; тур по языку с интерактивной песочницей, от
+        создателей языка, достаточно пройти до дженериков</p>
+    </li>
+  </ol>
+  <p>Дополнительно:</p>
+  <ol>
+    <li>
+      <p><a href="https://proselyte.net/tutorials/http-tutorial/introduction/" rel="noopener noreferrer nofollow"
+          target="_blank">https://proselyte.net/tutorials/http-tutorial/introduction/</a> &ndash; про протокол http</p>
+    </li>
+    <li>
+      <p><a href="https://habr.com/ru/articles/554274/" rel="noopener noreferrer nofollow"
+          target="_blank">https://habr.com/ru/articles/554274/</a> &ndash; про формат данных JSON</p>
+    </li>
+    <li>
+      <p><a href="https://learning.postman.com/docs/getting-started/overview/" rel="noopener noreferrer nofollow"
+          target="_blank">https://learning.postman.com/docs/getting-started/overview/</a> &ndash; про работу с Postman
+      </p>
+    </li>
+    <li>
+      <p><a href="https://codex.so/go-web-server" rel="noopener noreferrer nofollow"
+          target="_blank">https://codex.so/go-web-server</a> &ndash; пример простого веб-сервера на go</p>
+    </li>
+  </ol>
+  <h3>Сети</h3>
+  <ol>
+    <li>
+      <p>Курс молодого бойца по сетям <a
+          href="https://www.youtube.com/watch?v=voGkaUXFw-I&amp;list=PLcDkQ2Au8aVNYsqGsxRQxYyQijILa94T9&amp;index=1"
+          rel="noopener noreferrer nofollow" target="_blank">0.Видео уроки Cisco Packet Tracer. Курс молодого бойца.
+          Введение (</a><a href="http://youtube.com" rel="noopener noreferrer nofollow"
+          target="_blank">youtube.com</a><a
+          href="https://www.youtube.com/watch?v=voGkaUXFw-I&amp;list=PLcDkQ2Au8aVNYsqGsxRQxYyQijILa94T9&amp;index=1"
+          rel="noopener noreferrer nofollow" target="_blank">)</a>. Посмотри <strong>уроки с 0 по 10</strong></p>
+    </li>
+  </ol>
+</div></div></div>
+ <script>
+      // Скрипт для подсветки найденных слов на странице
+      (function () {
+        // Получаем поисковый запрос из URL параметров
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('search');
+
+        if (searchQuery && searchQuery.length >= 2) {
+          // Функция для подсветки текста
+          function highlightText(element, searchText) {
+            const regex = new RegExp(`(${searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+
+            // Обходим все текстовые узлы
+            const walker = document.createTreeWalker(
+              element,
+              NodeFilter.SHOW_TEXT,
+              null,
+              false
+            );
+
+            const nodes = [];
+            let node;
+            while (node = walker.nextNode()) {
+              if (node.textContent.trim().length > 0) {
+                nodes.push(node);
+              }
+            }
+
+            nodes.forEach(node => {
+              const parent = node.parentNode;
+              if (parent.nodeName !== 'SCRIPT' && parent.nodeName !== 'STYLE') {
+                const highlighted = node.textContent.replace(regex, '<mark class="search-highlight">$1</mark>');
+                if (highlighted !== node.textContent) {
+                  const newElement = document.createElement('span');
+                  newElement.innerHTML = highlighted;
+                  parent.replaceChild(newElement, node);
+                }
+              }
+            });
+          }
+
+          // Подсвечиваем текст на всей странице
+          highlightText(document.body, searchQuery);
+
+          // Прокручиваем к первому найденному элементу
+          const firstHighlight = document.querySelector('mark.search-highlight');
+          if (firstHighlight) {
+            setTimeout(() => {
+              firstHighlight.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+              });
+
+              // Добавляем анимацию мигания для первого результата
+              firstHighlight.style.transition = 'all 0.5s ease';
+              firstHighlight.style.backgroundColor = '#ff6b6b';
+              setTimeout(() => {
+                firstHighlight.style.backgroundColor = '#ffeaa7';
+              }, 1000);
+            }, 100);
+          }
+
+          // Добавляем стили для подсветки
+          const style = document.createElement('style');
+          style.textContent = `
+            mark.search-highlight {
+                background-color: #ffeaa7;
+                padding: 2px 4px;
+                border-radius: 3px;
+                font-weight: bold;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .search-info {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #3498db;
+                color: white;
+                padding: 10px 15px;
+                border-radius: 5px;
+                font-size: 14px;
+                z-index: 1000;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            }
+            .search-info button {
+                background: #e74c3c;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 3px;
+                cursor: pointer;
+                margin-left: 10px;
+            }
+        `;
+          document.head.appendChild(style);
+
+          // Добавляем информационную панель
+          const searchInfo = document.createElement('div');
+          searchInfo.className = 'search-info';
+          searchInfo.innerHTML = `
+            Найдено по запросу: "<strong>${searchQuery}</strong>"
+            <button onclick="this.parentElement.remove()">×</button>
+        `;
+          document.body.appendChild(searchInfo);
+
+          // Автоматически скрываем панель через 5 секунд
+          setTimeout(() => {
+            if (searchInfo.parentElement) {
+              searchInfo.remove();
+            }
+          }, 5000);
+        }
+      })();
+  </script>
+  <!-- Добавьте этот код в конец каждого HTML-файла -->
+  <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="search.js"></script>
+</body>
+
+</html>
