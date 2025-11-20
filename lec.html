@@ -220,12 +220,14 @@
                 </h2>
                 <div id="faqRefundCollapse1" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading1">
                   <div class="accordion-body">
+                    <div class="gallery-container" id="gallery1">
                     <img src="/img/линал/1.jpg">
                     <img src="/img/линал/2.jpg">
                     <img src="/img/линал/3.jpg">
                     <img src="/img/линал/4.jpg">
                     <img src="/img/линал/5.jpg">
                     <img src="/img/линал/6.jpg">
+                  </div>
                   </div>
                 </div>
               </div>
@@ -239,6 +241,7 @@
                 </h2>
                 <div id="faqRefundCollapse2" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading2">
                   <div class="accordion-body">
+                    <div class="gallery-container" id="gallery2">
                     <img src="/img/линал/6.jpg">
                     <img src="/img/линал/7.jpg">
                     <img src="/img/линал/8.jpg">
@@ -247,7 +250,7 @@
                     <img src="/img/линал/11.jpg">
                     <img src="/img/линал/12.jpg">
                     <img src="/img/линал/13.jpg">
-                    <ul>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -261,8 +264,10 @@
                 </h2>
                 <div id="faqRefundCollapse3" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading3">
                   <div class="accordion-body">
+                    <div class="gallery-container" id="gallery3">
                     <img src="/img/линал/13.jpg">
                     <img src="/img/линал/14.jpg">
+                  </div>
                   </div>
                 </div>
               </div>
@@ -276,6 +281,7 @@
                 </h2>
                 <div id="faqRefundCollapse4" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading4">
                   <div class="accordion-body">
+                    <div class="gallery-container" id="gallery4">
                     <img src="/img/линал/14.jpg">
                     <img src="/img/линал/15.jpg">
                     <img src="/img/линал/16.jpg">
@@ -286,6 +292,7 @@
                     <img src="/img/линал/21.jpg">
                     <img src="/img/линал/22.jpg">
                     <img src="/img/линал/23.jpg">
+                  </div>
                   </div>
                 </div>
               </div>
@@ -299,9 +306,10 @@
                 </h2>
                 <div id="faqRefundCollapse5" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading5">
                   <div class="accordion-body">
+                    <div class="gallery-container" id="gallery5">
                     <img src="/img/линал/23.jpg">
                     <img src="/img/линал/24.jpg">
-                  </div>
+                  </div></div>
                 </div>
               </div>
               <div class="accordion-item bg-transparent border-bottom py-3">
@@ -314,12 +322,13 @@
                 </h2>
                 <div id="faqRefundCollapse6" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading6">
                   <div class="accordion-body">
+                    <div class="gallery-container" id="gallery6">
                     <img src="/img/линал/24.jpg">
                     <img src="/img/линал/25.jpg">
                     <img src="/img/линал/26.jpg">
                     <img src="/img/линал/27.jpg">
                     <img src="/img/линал/28.jpg">
-                  </div>
+                  </div></div>
                 </div>
               </div>
               <div class="accordion-item bg-transparent border-bottom py-3">
@@ -2350,6 +2359,631 @@
   <!-- Добавьте этот код в конец каждого HTML-файла -->
   <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/search.js"></script>
+       <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        h2 {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: flex-start;
+        }
+
+        .gallery-container img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .image-viewer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .viewer-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            z-index: 10;
+        }
+
+        .viewer-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .zoom-controls {
+            display: flex;
+            gap: 5px;
+            margin-right: 10px;
+        }
+
+        .viewer-controls button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+
+        .viewer-controls button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .image-container {
+            position: relative;
+            width: 90%;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            cursor: grab;
+        }
+
+        .image-container.grabbing {
+            cursor: grabbing;
+        }
+
+        .image-wrapper {
+            position: relative;
+            display: inline-block;
+            transition: transform 0.1s;
+        }
+
+        .main-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s;
+            z-index: 5;
+        }
+
+        .nav-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev-button {
+            left: 20px;
+        }
+
+        .next-button {
+            right: 20px;
+        }
+
+        .viewer-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .caption-container {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #fff;
+            padding: 8px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+        }
+
+        .thumbnail-container {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 10px 0;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .thumbnail {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 3px;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .thumbnail.active {
+            opacity: 1;
+            border: 2px solid white;
+        }
+
+        .counter {
+            font-size: 16px;
+            margin-right: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                height: 60%;
+            }
+            
+            .nav-button {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            
+            .viewer-controls {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .zoom-controls {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="image-viewer" id="imageViewer">
+        <div class="viewer-header">
+            <div class="counter" id="counter">1/6</div>
+            <div class="viewer-controls">
+                <div class="zoom-controls">
+                    <button id="zoomOutBtn" title="Отдалить">🔍-</button>
+                    <button id="resetZoomBtn" title="Сбросить масштаб и позицию">⟲</button>
+                    <button id="zoomInBtn" title="Приблизить">🔍+</button>
+                </div>
+                <button id="fullscreenBtn" title="Полный экран">⛶</button>
+                <button id="downloadBtn" title="Скачать">📥</button>
+                <button id="openNewBtn" title="Открыть в новом окне">↗</button>
+                <button id="closeBtn" title="Закрыть">✕</button>
+            </div>
+        </div>
+
+        <div class="image-container" id="imageContainer">
+            <div class="image-wrapper" id="imageWrapper">
+                <img class="main-image" id="mainImage" src="" alt="">
+            </div>
+            <button class="nav-button prev-button" id="prevButton">&#10094;</button>
+            <button class="nav-button next-button" id="nextButton">&#10095;</button>
+        </div>
+
+        <div class="viewer-footer">
+            <div class="caption-container" id="captionContainer">
+                <!-- Подпись будет отображаться здесь -->
+            </div>
+            <div class="thumbnail-container" id="thumbnailContainer">
+                <!-- Миниатюры будут добавлены автоматически -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Элементы DOM
+            const imageViewer = document.getElementById('imageViewer');
+            const imageContainer = document.getElementById('imageContainer');
+            const imageWrapper = document.getElementById('imageWrapper');
+            const mainImage = document.getElementById('mainImage');
+            const prevButton = document.getElementById('prevButton');
+            const nextButton = document.getElementById('nextButton');
+            const closeButton = document.getElementById('closeBtn');
+            const fullscreenButton = document.getElementById('fullscreenBtn');
+            const downloadButton = document.getElementById('downloadBtn');
+            const openNewButton = document.getElementById('openNewBtn');
+            const zoomInButton = document.getElementById('zoomInBtn');
+            const zoomOutButton = document.getElementById('zoomOutBtn');
+            const resetZoomButton = document.getElementById('resetZoomBtn');
+            const counter = document.getElementById('counter');
+            const captionContainer = document.getElementById('captionContainer');
+            const thumbnailContainer = document.getElementById('thumbnailContainer');
+            
+            // Переменные состояния
+            let currentIndex = 0;
+            let currentImages = [];
+            let zoomLevel = 1;
+            let isFullscreen = false;
+            let isDragging = false;
+            let startX, startY;
+            let translateX = 0, translateY = 0;
+            
+            // Инициализация
+            function init() {
+                // Находим все галереи на странице
+                const galleries = document.querySelectorAll('.gallery-container');
+                
+                // Добавляем обработчики событий для каждой галереи
+                galleries.forEach(gallery => {
+                    const images = Array.from(gallery.querySelectorAll('img'));
+                    
+                    images.forEach((img, index) => {
+                        img.addEventListener('click', () => {
+                            // Открываем просмотрщик с изображениями из этой галереи
+                            openViewer(images, index);
+                        });
+                    });
+                });
+                
+                // Обработчики событий для кнопок просмотрщика
+                prevButton.addEventListener('click', showPrevImage);
+                nextButton.addEventListener('click', showNextImage);
+                closeButton.addEventListener('click', closeViewer);
+                fullscreenButton.addEventListener('click', toggleFullscreen);
+                downloadButton.addEventListener('click', downloadImage);
+                openNewButton.addEventListener('click', openInNewWindow);
+                zoomInButton.addEventListener('click', zoomIn);
+                zoomOutButton.addEventListener('click', zoomOut);
+                resetZoomButton.addEventListener('click', resetZoomAndPosition);
+                
+                // Обработчики для перемещения изображения
+                imageContainer.addEventListener('mousedown', startDrag);
+                imageContainer.addEventListener('touchstart', startDragTouch);
+                document.addEventListener('mousemove', drag);
+                document.addEventListener('touchmove', dragTouch);
+                document.addEventListener('mouseup', endDrag);
+                document.addEventListener('touchend', endDrag);
+                
+                // Обработчики клавиатуры
+                document.addEventListener('keydown', handleKeyPress);
+                
+                // Обработчик изменения размера окна
+                window.addEventListener('resize', handleResize);
+            }
+            
+            // Функции для перемещения изображения
+            function startDrag(e) {
+                if (zoomLevel > 1) {
+                    isDragging = true;
+                    startX = e.clientX - translateX;
+                    startY = e.clientY - translateY;
+                    imageContainer.classList.add('grabbing');
+                }
+            }
+            
+            function startDragTouch(e) {
+                if (zoomLevel > 1 && e.touches.length === 1) {
+                    isDragging = true;
+                    startX = e.touches[0].clientX - translateX;
+                    startY = e.touches[0].clientY - translateY;
+                    imageContainer.classList.add('grabbing');
+                }
+            }
+            
+            function drag(e) {
+                if (!isDragging) return;
+                e.preventDefault();
+                
+                const x = e.clientX - startX;
+                const y = e.clientY - startY;
+                
+                // Ограничиваем перемещение в пределах видимой области
+                const maxX = (mainImage.width * zoomLevel - imageContainer.clientWidth) / 2;
+                const maxY = (mainImage.height * zoomLevel - imageContainer.clientHeight) / 2;
+                
+                translateX = Math.max(-maxX, Math.min(maxX, x));
+                translateY = Math.max(-maxY, Math.min(maxY, y));
+                
+                updateTransform();
+            }
+            
+            function dragTouch(e) {
+                if (!isDragging || e.touches.length !== 1) return;
+                e.preventDefault();
+                
+                const x = e.touches[0].clientX - startX;
+                const y = e.touches[0].clientY - startY;
+                
+                // Ограничиваем перемещение в пределах видимой области
+                const maxX = (mainImage.width * zoomLevel - imageContainer.clientWidth) / 2;
+                const maxY = (mainImage.height * zoomLevel - imageContainer.clientHeight) / 2;
+                
+                translateX = Math.max(-maxX, Math.min(maxX, x));
+                translateY = Math.max(-maxY, Math.min(maxY, y));
+                
+                updateTransform();
+            }
+            
+            function endDrag() {
+                isDragging = false;
+                imageContainer.classList.remove('grabbing');
+            }
+            
+            function updateTransform() {
+                imageWrapper.style.transform = `translate(${translateX}px, ${translateY}px) scale(${zoomLevel})`;
+            }
+            
+            // Создание миниатюр
+            function createThumbnails() {
+                thumbnailContainer.innerHTML = '';
+                
+                currentImages.forEach((img, index) => {
+                    const thumbnail = document.createElement('img');
+                    thumbnail.src = img.src;
+                    thumbnail.alt = img.alt;
+                    thumbnail.className = 'thumbnail';
+                    
+                    thumbnail.addEventListener('click', () => {
+                        currentIndex = index;
+                        updateViewer();
+                    });
+                    
+                    thumbnailContainer.appendChild(thumbnail);
+                });
+            }
+            
+            // Открытие просмотрщика
+            function openViewer(images, index) {
+                currentImages = images;
+                currentIndex = index;
+                updateViewer();
+                imageViewer.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Закрытие просмотрщика
+            function closeViewer() {
+                imageViewer.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                resetZoomAndPosition();
+            }
+            
+            // Обновление просмотрщика
+            function updateViewer() {
+                // Устанавливаем основное изображение
+                mainImage.src = currentImages[currentIndex].src;
+                mainImage.alt = currentImages[currentIndex].alt;
+                
+                // Ждем загрузки изображения для получения его размеров
+                mainImage.onload = function() {
+                    resetZoomAndPosition();
+                };
+                
+                // Обновляем счетчик
+                counter.textContent = `${currentIndex + 1}/${currentImages.length}`;
+                
+                // Обновляем подпись
+                captionContainer.textContent = currentImages[currentIndex].dataset.caption || '';
+                
+                // Создаем миниатюры
+                createThumbnails();
+                
+                // Обновляем активную миниатюру
+                const thumbnails = thumbnailContainer.querySelectorAll('.thumbnail');
+                thumbnails.forEach((thumb, index) => {
+                    if (index === currentIndex) {
+                        thumb.classList.add('active');
+                    } else {
+                        thumb.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Показать предыдущее изображение
+            function showPrevImage() {
+                currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+                updateViewer();
+            }
+            
+            // Показать следующее изображение
+            function showNextImage() {
+                currentIndex = (currentIndex + 1) % currentImages.length;
+                updateViewer();
+            }
+            
+            // Приближение
+            function zoomIn() {
+                const oldZoom = zoomLevel;
+                zoomLevel = Math.min(zoomLevel + 0.2, 3);
+                
+                // Корректируем позицию при увеличении
+                if (zoomLevel > 1) {
+                    const scaleChange = zoomLevel / oldZoom;
+                    translateX *= scaleChange;
+                    translateY *= scaleChange;
+                }
+                
+                updateZoom();
+            }
+            
+            // Отдаление
+            function zoomOut() {
+                const oldZoom = zoomLevel;
+                zoomLevel = Math.max(zoomLevel - 0.2, 0.5);
+                
+                // Корректируем позицию при уменьшении
+                if (zoomLevel > 1) {
+                    const scaleChange = zoomLevel / oldZoom;
+                    translateX *= scaleChange;
+                    translateY *= scaleChange;
+                } else {
+                    // Если масштаб 1 или меньше - сбрасываем позицию
+                    translateX = 0;
+                    translateY = 0;
+                }
+                
+                updateZoom();
+            }
+            
+            // Сброс масштаба и позиции
+            function resetZoomAndPosition() {
+                zoomLevel = 1;
+                translateX = 0;
+                translateY = 0;
+                updateZoom();
+            }
+            
+            // Обновление масштаба
+            function updateZoom() {
+                updateTransform();
+                
+                // Меняем курсор когда можно перемещать изображение
+                if (zoomLevel > 1) {
+                    imageContainer.style.cursor = 'grab';
+                } else {
+                    imageContainer.style.cursor = 'default';
+                }
+            }
+            
+            // Переключение полноэкранного режима
+            function toggleFullscreen() {
+                if (!isFullscreen) {
+                    if (imageViewer.requestFullscreen) {
+                        imageViewer.requestFullscreen();
+                    } else if (imageViewer.webkitRequestFullscreen) {
+                        imageViewer.webkitRequestFullscreen();
+                    } else if (imageViewer.msRequestFullscreen) {
+                        imageViewer.msRequestFullscreen();
+                    }
+                    isFullscreen = true;
+                    fullscreenButton.textContent = '⛶';
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    }
+                    isFullscreen = false;
+                    fullscreenButton.textContent = '⛶';
+                }
+            }
+            
+            // Скачивание изображения
+            function downloadImage() {
+                const link = document.createElement('a');
+                link.href = currentImages[currentIndex].src;
+                link.download = `image-${currentIndex + 1}.jpg`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+            
+            // Открытие в новом окне
+            function openInNewWindow() {
+                window.open(currentImages[currentIndex].src, '_blank');
+            }
+            
+            // Обработка нажатий клавиш
+            function handleKeyPress(e) {
+                if (imageViewer.style.display === 'flex') {
+                    switch(e.key) {
+                        case 'Escape':
+                            closeViewer();
+                            break;
+                        case 'ArrowLeft':
+                            showPrevImage();
+                            break;
+                        case 'ArrowRight':
+                            showNextImage();
+                            break;
+                        case '+':
+                            zoomIn();
+                            break;
+                        case '-':
+                            zoomOut();
+                            break;
+                        case '0':
+                            resetZoomAndPosition();
+                            break;
+                    }
+                }
+            }
+            
+            // Обработка изменения размера окна
+            function handleResize() {
+                // При изменении размера окна корректируем позицию
+                if (imageViewer.style.display === 'flex') {
+                    const maxX = (mainImage.width * zoomLevel - imageContainer.clientWidth) / 2;
+                    const maxY = (mainImage.height * zoomLevel - imageContainer.clientHeight) / 2;
+                    
+                    translateX = Math.max(-maxX, Math.min(maxX, translateX));
+                    translateY = Math.max(-maxY, Math.min(maxY, translateY));
+                    
+                    updateTransform();
+                }
+            }
+            
+            // Запуск инициализации
+            init();
+        });
+    </script>
 </body>
 
 </html>
