@@ -29,7 +29,7 @@
       <div class="col-7" id="si">
         <div id="search-interface1">
           <div class="search-box1">
-            <input type="text" id="search-input1" placeholder="Поиск 🔎">
+            <input type="text" id="search-input1" placeholder="Поиск ??">
             <button id="search-button1" style="display: none;">Найти</button>
           </div>
 
@@ -98,7 +98,7 @@
               <div class="col-11">
                 <div id="search-interface">
                   <div class="search-box">
-                    <input type="text" id="search-input" placeholder="Поиск 🔎">
+                    <input type="text" id="search-input" placeholder="Поиск ??">
                     <button id="search-button" style="display: none;">Найти</button>
                   </div>
                   <div id="search-results">
@@ -482,7 +482,14 @@ style="display:block">
                 </h2>
                 <div id="faqRefundCollapse13" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading13">
                   <div class="accordion-body">
-                    <p>Временно отсутствует.</p>
+                    <div class="gallery-container">
+                    <img src="/img/линал/69.jpg">
+                    <img src="/img/линал/70.jpg">
+                    <img src="/img/линал/71.jpg">
+                    <img src="/img/линал/72.jpg">
+                    <img src="/img/линал/73.jpg">
+                    <img src="/img/линал/74.jpg">
+                  </div>
                   </div>
                 </div>
               </div>
@@ -747,7 +754,7 @@ style="display:block">
                 </h2>
                 <div id="faqAccountCollapse001" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading001">
                   <div class="accordion-body">
-                    <a href="/files/история/1.pdf">Презентация 1 лекции</a>
+                    <a href="/files/история/1.pptx">Презентация 1 лекции</a>
                     <div class="gallery-container"><img src="/img/история/1.jpg">
                     <img src="/img/история/2.jpg">
                     <img src="/img/история/3.jpg">
@@ -1940,7 +1947,7 @@ style="display:block">
                 </h2>
                 <div id="faqRefundCollapse00011" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading00011">
                   <div class="accordion-body">
-                    <a href="/files/матан/10.pdf">Презентация 10 лекции</a>
+                    <a href="/files/матан/11.pdf">Презентация 11 лекции</a>
                     <div class="gallery-container">
                     <img src="/img/матан/135.jpg">
                     <img src="/img/матан/136.jpg">
@@ -2229,6 +2236,7 @@ style="display:block">
                 </h2>
                 <div id="faqRefundCollapse00022" class="accordion-collapse collapse" aria-labelledby="faqRefundHeading00022">
                   <div class="accordion-body">
+                    <a href="/files/матан/22.pdf">Презентация 22 лекции</a>
                     <div class="gallery-container"><img src="/img/матан/266.jpg">
                     <img src="/img/матан/267.jpg">
                     <img src="/img/матан/268.jpg">
@@ -3071,8 +3079,6 @@ style="display:block">
             }
         }
     </style>
-</head>
-<body>
     
     <div class="image-viewer" id="imageViewer">
         <div class="viewer-header">
@@ -3230,8 +3236,8 @@ style="display:block">
                 const y = e.clientY - startY;
                 
                 // Ограничиваем перемещение в пределах видимой области
-                const maxX = (mainImage.width * zoomLevel - imageContainer.clientWidth) / 2;
-                const maxY = (mainImage.height * zoomLevel - imageContainer.clientHeight) / 2;
+                const maxX = Math.max(0, (mainImage.width * zoomLevel - imageContainer.clientWidth) / 2);
+                const maxY = Math.max(0, (mainImage.height * zoomLevel - imageContainer.clientHeight) / 2);
                 
                 translateX = Math.max(-maxX, Math.min(maxX, x));
                 translateY = Math.max(-maxY, Math.min(maxY, y));
@@ -3247,8 +3253,8 @@ style="display:block">
                 const y = e.touches[0].clientY - startY;
                 
                 // Ограничиваем перемещение в пределах видимой области
-                const maxX = (mainImage.width * zoomLevel - imageContainer.clientWidth) / 2;
-                const maxY = (mainImage.height * zoomLevel - imageContainer.clientHeight) / 2;
+                const maxX = Math.max(0, (mainImage.width * zoomLevel - imageContainer.clientWidth) / 2);
+                const maxY = Math.max(0, (mainImage.height * zoomLevel - imageContainer.clientHeight) / 2);
                 
                 translateX = Math.max(-maxX, Math.min(maxX, x));
                 translateY = Math.max(-maxY, Math.min(maxY, y));
@@ -3308,7 +3314,8 @@ style="display:block">
                 
                 // Ждем загрузки изображения для получения его размеров
                 mainImage.onload = function() {
-                    resetZoomAndPosition();
+                    calculateInitialZoom();
+                    updateZoom();
                 };
                 
                 // Обновляем счетчик
@@ -3331,6 +3338,35 @@ style="display:block">
                 });
             }
             
+            // Расчет начального масштаба для полной высоты
+            function calculateInitialZoom() {
+                const containerHeight = imageContainer.clientHeight;
+                const imageHeight = mainImage.naturalHeight;
+                const imageWidth = mainImage.naturalWidth;
+                
+                // Масштаб для полной высоты
+                const heightZoom = containerHeight / imageHeight;
+                
+                // Проверяем, влазит ли изображение по ширине при этом масштабе
+                const scaledWidth = imageWidth * heightZoom;
+                const containerWidth = imageContainer.clientWidth;
+                
+                if (scaledWidth <= containerWidth) {
+                    // Если влазит по ширине - используем масштаб по высоте
+                    zoomLevel = heightZoom;
+                } else {
+                    // Если не влазит - используем масштаб по ширине
+                    zoomLevel = containerWidth / imageWidth;
+                }
+                
+                // Ограничиваем минимальный масштаб
+                zoomLevel = Math.max(zoomLevel, 0.1);
+                
+                // Сбрасываем позицию
+                translateX = 0;
+                translateY = 0;
+            }
+            
             // Показать предыдущее изображение
             function showPrevImage() {
                 currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
@@ -3346,7 +3382,7 @@ style="display:block">
             // Приближение
             function zoomIn() {
                 const oldZoom = zoomLevel;
-                zoomLevel = Math.min(zoomLevel + 0.2, 3);
+                zoomLevel = Math.min(zoomLevel + 0.2, 5);
                 
                 // Корректируем позицию при увеличении
                 if (zoomLevel > 1) {
@@ -3361,7 +3397,7 @@ style="display:block">
             // Отдаление
             function zoomOut() {
                 const oldZoom = zoomLevel;
-                zoomLevel = Math.max(zoomLevel - 0.2, 0.5);
+                zoomLevel = Math.max(zoomLevel - 0.2, 0.1);
                 
                 // Корректируем позицию при уменьшении
                 if (zoomLevel > 1) {
@@ -3379,9 +3415,7 @@ style="display:block">
             
             // Сброс масштаба и позиции
             function resetZoomAndPosition() {
-                zoomLevel = 1;
-                translateX = 0;
-                translateY = 0;
+                calculateInitialZoom();
                 updateZoom();
             }
             
@@ -3408,7 +3442,13 @@ style="display:block">
                         imageViewer.msRequestFullscreen();
                     }
                     isFullscreen = true;
-                    fullscreenButton.textContent = '?';
+                    fullscreenButton.textContent = '⛶';
+                    
+                    // При переходе в полноэкранный режим пересчитываем масштаб
+                    setTimeout(() => {
+                        calculateInitialZoom();
+                        updateZoom();
+                    }, 100);
                 } else {
                     if (document.exitFullscreen) {
                         document.exitFullscreen();
@@ -3418,7 +3458,13 @@ style="display:block">
                         document.msExitFullscreen();
                     }
                     isFullscreen = false;
-                    fullscreenButton.textContent = '?';
+                    fullscreenButton.textContent = '⛶';
+                    
+                    // При выходе из полноэкранного режима пересчитываем масштаб
+                    setTimeout(() => {
+                        calculateInitialZoom();
+                        updateZoom();
+                    }, 100);
                 }
             }
             
@@ -3465,10 +3511,12 @@ style="display:block">
             
             // Обработка изменения размера окна
             function handleResize() {
-                // При изменении размера окна корректируем позицию
+                // При изменении размера окна корректируем позицию и пересчитываем масштаб
                 if (imageViewer.style.display === 'flex') {
-                    const maxX = (mainImage.width * zoomLevel - imageContainer.clientWidth) / 2;
-                    const maxY = (mainImage.height * zoomLevel - imageContainer.clientHeight) / 2;
+                    calculateInitialZoom();
+                    
+                    const maxX = Math.max(0, (mainImage.width * zoomLevel - imageContainer.clientWidth) / 2);
+                    const maxY = Math.max(0, (mainImage.height * zoomLevel - imageContainer.clientHeight) / 2);
                     
                     translateX = Math.max(-maxX, Math.min(maxX, translateX));
                     translateY = Math.max(-maxY, Math.min(maxY, translateY));
@@ -3484,4 +3532,3 @@ style="display:block">
 </body>
 
 </html>
-
