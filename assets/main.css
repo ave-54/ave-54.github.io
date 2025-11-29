@@ -1,4 +1,7 @@
-      /* Стили для кнопки открытия */
+
+        
+        
+        /* Стили для кнопки открытия */
       .open-btn {
         padding: 10px 20px;
         background: #4caf4f00!important;
@@ -433,6 +436,9 @@ a:hover{
 #bpso7{
         margin-bottom: 25%;
     }
+minnit-svg-container{
+    bottom: 40px!important;
+}
 @media screen and (width < 1081px) {
 .menu .ml{
     display: none;
@@ -680,3 +686,7 @@ top:25%;
     right: 5%;
     z-index: 4;
   }
+
+
+
+  
